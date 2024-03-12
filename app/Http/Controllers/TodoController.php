@@ -11,14 +11,34 @@ class TodoController extends Controller
         //dd($todos);
         return view('home',['todos'=>$todos]);
     }
+    
+    /*public function store(Request $request){
+    //dd($request);
+    //dd($request->post('title'));
+    $todo = new Todo();
+    $todo->title = $request->post('title');
+    $todo->save();
+    //return redirect('/');
+    return back();
+    }*/
 
+    //magic method
     public function store(Request $request){
         //dd($request);
         //dd($request->post('title'));
-        $todo = new Todo();
-        $todo->title = $request->post('title');
-        $todo->save();
+
+        $ValidatedData = $request->validate([
+            'title'=>'required|max:124'
+        ]);
+        
+        Todo::create($ValidatedData); //mass assigment automatically assign data / store data to database
+
+        //$todo = new Todo;
+        //$todo->title = $request->title;
+        //$todo->save();
         //return redirect('/');
+        
         return back();
     }
 }
+

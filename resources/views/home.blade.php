@@ -14,6 +14,12 @@ Home
                     @csrf
                     <label for="title">Title*</label>
                     <input type="text" name="title" id="title" class="form-control mb-2"/>
+                    <!--@error('title')
+                        <small class="text-danger">{{ $message }}</small>
+                    @enderror-->
+                    @foreach($errors->get('title') as $err)
+                        <small class="text-danger">{{ $err }}</small>
+                    @endforeach
                     <input type="submit" class="btn btn-dark btn-block" value="Submit"/>
                 </form>
             </div>

@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [TodoController::class,'home']);
+Route::get('/', [TodoController::class,'home'])->name('home');
 
 Route::post('/store', [TodoController::class,'store'])->name('store'); 
