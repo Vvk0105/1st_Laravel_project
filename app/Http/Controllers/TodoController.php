@@ -9,6 +9,6 @@ class TodoController extends Controller
 {
     public function home(){
         $title = "Todo";
-        return view('welcome',['name'=>'Vvk','title'=>$title]);
+        return view('home',['name'=>'Vvk','title'=>$title]);
     }
 }
