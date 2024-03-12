@@ -1,6 +1,8 @@
 @extends('layout')
 @section('content')
-
+@section('title')
+Update
+@endsection
 <div class="container">
     <div class="row">
         <div class="col-md-12">
