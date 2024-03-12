@@ -21,3 +21,5 @@ Route::post('/store', [TodoController::class,'store'])->name('store');
 Route::get('/edit/{id}', [TodoController::class,'edit'])->name('edit');
 
 Route::post('/update/{id}',[TodoController::class,'update'])->name('update');
+
+Route::post('/detele/{id}', [TodoController::class,'delete'])->name('delete');

@@ -63,5 +63,9 @@ public function update(Request $request, Todo $id){
 
 }
 
+public function delete(Todo $id){
+    $id->delete();
+    return back();
 }
 
+}
