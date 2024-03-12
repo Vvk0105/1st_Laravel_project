@@ -31,7 +31,7 @@ Home
                             <span class="lead">{{ $todo->title }}</span>
                         </div>
                         <div>
-                            <a href="#" class="btn btn-warning">Update</a>
+                            <a href="{{ route('edit',$todo->id  ) }}" class="btn btn-warning">Update</a>
                             <form action="#" method="POST" class="d-inline-block">
                                 <input type="submit" class="btn btn-danger" value="Delete"/>
                             </form>
